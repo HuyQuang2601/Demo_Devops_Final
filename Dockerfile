@@ -29,6 +29,6 @@ RUN addgroup -S spring && adduser -S spring -G spring
 COPY --from=build --chown=spring:spring /workspace/build/libs/app.jar /app/app.jar
 USER spring
 
-EXPOSE 8080
+EXPOSE 8086
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
